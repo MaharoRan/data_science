@@ -1,0 +1,126 @@
+{
+  "info": {
+    "_postman_id": "bb9526f9-f6f6-4c0a-b7f7-e6b64c531d07",
+    "name": "Productivity Prediction",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52808387",
+    "_collection_link": "https://go.postman.co/collection/52808387-bb9526f9-f6f6-4c0a-b7f7-e6b64c531d07?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get the API status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/productivity",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "productivity"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict a candidate productivity with Random Forest",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"age\": 36,\r\n  \"gender\": \"Female\",\r\n  \"job_type\": \"Education\",\r\n  \"daily_social_media_time\": 4.089168,\r\n  \"social_platform_preference\": \"Twitter\",\r\n  \"number_of_notifications\": 49,\r\n  \"work_hours_per_day\": 6.560467,\r\n  \"perceived_productivity_score\": 2.681830,\r\n  \"stress_level\": 4.0,\r\n  \"sleep_hours\": 6.325507,\r\n  \"screen_time_before_sleep\": 0.747998,\r\n  \"breaks_during_work\": 4,\r\n  \"coffee_consumption_per_day\": 4,\r\n  \"days_feeling_burnout_per_month\": 29,\r\n  \"weekly_offline_hours\": 8.419648,\r\n  \"job_satisfaction_score\": 3.444376\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict a candidate productivity with Gradient Boosting",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"age\": 36,\r\n  \"gender\": \"Female\",\r\n  \"job_type\": \"Education\",\r\n  \"daily_social_media_time\": 4.089168,\r\n  \"social_platform_preference\": \"Twitter\",\r\n  \"number_of_notifications\": 49,\r\n  \"work_hours_per_day\": 6.560467,\r\n  \"perceived_productivity_score\": 2.681830,\r\n  \"stress_level\": 4.0,\r\n  \"sleep_hours\": 6.325507,\r\n  \"screen_time_before_sleep\": 0.747998,\r\n  \"breaks_during_work\": 4,\r\n  \"coffee_consumption_per_day\": 4,\r\n  \"days_feeling_burnout_per_month\": 29,\r\n  \"weekly_offline_hours\": 8.419648,\r\n  \"job_satisfaction_score\": 3.444376\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8001/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8001",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict a candidate productivity with SVR",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"age\": 36,\r\n  \"gender\": \"Female\",\r\n  \"job_type\": \"Education\",\r\n  \"daily_social_media_time\": 4.089168,\r\n  \"social_platform_preference\": \"Twitter\",\r\n  \"number_of_notifications\": 49,\r\n  \"work_hours_per_day\": 6.560467,\r\n  \"perceived_productivity_score\": 2.681830,\r\n  \"stress_level\": 4.0,\r\n  \"sleep_hours\": 6.325507,\r\n  \"screen_time_before_sleep\": 0.747998,\r\n  \"breaks_during_work\": 4,\r\n  \"coffee_consumption_per_day\": 4,\r\n  \"days_feeling_burnout_per_month\": 29,\r\n  \"weekly_offline_hours\": 8.419648,\r\n  \"job_satisfaction_score\": 3.444376\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8002/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8002",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
